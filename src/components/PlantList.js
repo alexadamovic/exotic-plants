@@ -11,6 +11,7 @@ function PlantList(props){
             common={plant.common}
             imageURL={plant.imageURL}
             price={plant.price}
+            quantity={plant.quantity}
             key={index}/>
         )}
     </React.Fragment>

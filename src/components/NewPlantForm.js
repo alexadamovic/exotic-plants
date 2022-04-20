@@ -21,7 +21,12 @@ function NewPlantForm(props){
         <input
           type='number'
           name='price'
+          step='.01'
           placeholder='Price' />
+        <input
+          type='number'
+          name='quantity'
+          placeholder='Quantity Available' />  
         <button type='submit'>Add Plant</button>
       </form>
     </React.Fragment>
@@ -29,7 +34,7 @@ function NewPlantForm(props){
 
   function handleNewPlantFormSubmission(event) {
     event.preventDefault();
-    props.onNewPlantCreation({scientific: event.target.scientific.value, common: event.target.common.value, imageURL: event.target.imageURL.value, price: event.target.price.value, id: v4()});
+    props.onNewPlantCreation({scientific: event.target.scientific.value, common: event.target.common.value, imageURL: event.target.imageURL.value, price: event.target.price.value, quantity: event.target.quantity.value, id: v4()});
   }
 }
 
