@@ -29,7 +29,7 @@ function NewPlantForm(props){
 
   function handleNewPlantFormSubmission(event) {
     event.preventDefault();
-    props.onNewPlantCreation({names: event.target.names.value, location: event.target.location.value, issue: event.target.issue.value, id: v4()});
+    props.onNewPlantCreation({scientific: event.target.scientific.value, common: event.target.common.value, imageURL: event.target.imageURL.value, price: event.target.price.value, id: v4()});
   }
 }
 
