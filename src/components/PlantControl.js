@@ -31,7 +31,8 @@ class PlantControl extends React.Component {
       currentlyVisibleState = <NewPlantForm onNewPlantCreation={this.handleAddingNewPlantToList}/>
       buttonText = "Return to Plant List";
     } else {
-      currentlyVisibleState = <PlantList plantList={this.state.mainPlantList}/>
+      currentlyVisibleState = 
+      <PlantList plantList={this.state.mainPlantList}/>
       buttonText = "Add Plant";
     }
     return (
