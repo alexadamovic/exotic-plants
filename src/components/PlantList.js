@@ -7,13 +7,16 @@ function PlantList(props){
   return (
     <React.Fragment>
       <Row>
-        {props.plantList.map((plant, index) =>
-            <Plant scientific={plant.scientific}
+        {props.plantList.map((plant) =>
+            <Plant 
+              whenPlantClicked={props.onPlantSelection}
+              scientific={plant.scientific}
               common={plant.common}
               imageURL={plant.imageURL}
               price={plant.price}
               quantity={plant.quantity}
-              key={index}/>
+              id={plant.id}
+              key={plant.id}/>
         )}
       </Row>
     </React.Fragment>
@@ -21,7 +24,8 @@ function PlantList(props){
 }
 
 PlantList.propTypes = {
-  plantList: PropTypes.array
+  plantList: PropTypes.array,
+  onPlantSelection: PropTypes.func
 };
 
 export default PlantList;

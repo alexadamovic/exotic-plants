@@ -6,7 +6,8 @@ function Header(){
   const headerStyles = {
     fontFamily: 'Numans',
     backgroundColor: '#ffebb5',
-    paddingTop: '3%'
+    paddingTop: '3%',
+    paddingLeft: '2%'
   }
 
   return (
